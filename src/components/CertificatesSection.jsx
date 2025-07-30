@@ -1,47 +1,39 @@
-import { ExternalLink } from "lucide-react";
-
 const certificates = [
   {
     id: 1,
-    title: "Full Stack Web Development",
-    issuer: "Coursera",
-    image: "/Certificate/Azure.jpg",
-    certificateUrl: "https://example.com/certificate1",
+    title: "Microsoft Certified: Azure Fundamentals",
+    issuer: "Microsoft",
+    image: "/Certificate/Azure.jpg"
   },
   {
     id: 2,
-    title: "JavaScript Essentials",
-    issuer: "Cisco Networking Academy",
-    image: "/Certificate/CyberSecurity.jpg",
-    certificateUrl: "https://example.com/certificate2",
+    title: "Semi Finalist in Nexus Hackathon",
+    issuer: "Coimbatore Institute of Technology",
+    image: "/Certificate/Nexus.jpg"
   },
   {
     id: 3,
-    title: "React Frontend Developer",
-    issuer: "Meta",
-    image: "/Certificate/IOT.jpg",
-    certificateUrl: "https://example.com/certificate3",
+    title: "Junior Cybersecurity Analyst",
+    issuer: "CISCO Networking Academy",
+    image: "/Certificate/Cybersecurity.jpg"
   },
   {
     id: 4,
-    title: "PHP & MySQL Development",
-    issuer: "Udemy",
-    image: "/Certificate/java.jpg",
-    certificateUrl: "https://example.com/certificate4",
+    title: "IEEE Conference Paper Presentation",
+    issuer: "ICSCNA 2024",
+    image: "/Certificate/Conference.jpg"
   },
   {
     id: 5,
-    title: "Git and GitHub Mastery",
-    issuer: "LinkedIn Learning",
-    image: "/Certificate/Nexus.jpg",
-    certificateUrl: "https://example.com/certificate5",
+    title: "Programming in Java",
+    issuer: "NPTEL",
+    image: "/Certificate/java.jpg"
   },
   {
     id: 6,
-    title: "MongoDB Basics",
-    issuer: "MongoDB University",
-    image: "/Certificate/Php.jpg",
-    certificateUrl: "https://example.com/certificate6",
+    title: "PHP & MySQL for Web Development",
+    issuer: "Stack Queue",
+    image: "/Certificate/Php.jpg"
   },
 ];
 
@@ -75,16 +67,7 @@ export const CertificatesSection = () => {
                 <p className="text-muted-foreground text-sm mb-4">
                   Issued by: {cert.issuer}
                 </p>
-                <div className="flex justify-between items-center">
-                  <a
-                    href={cert.certificateUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                  >
-                    <ExternalLink size={20} />
-                  </a>
-                </div>
+                
               </div>
             </div>
           ))}

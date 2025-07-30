@@ -16,13 +16,13 @@ export const AboutSection = () => {
             </h3>
 
             <p className="text-muted-foreground">
-              Currently pursuing B.Tech in Information Technology, skilled in building responsive 
+              Currently pursuing B.Tech in Information Technology, skilled in building responsive
               and user-friendly web applications using MERN, PHP (Laravel), MySQL, and JavaScript.
             </p>
 
             <p className="text-muted-foreground">
-                Passionate about learning new technologies, solving problems through code, 
-                and eager to contribute to innovative projects and collaborative teams.
+              Passionate about learning new technologies, solving problems through code,
+              and eager to contribute to innovative projects and collaborative teams.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
@@ -32,11 +32,12 @@ export const AboutSection = () => {
               </a>
 
               <a
-                href=""
-                className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
-              >
-                Download CV
-              </a>
+  href="/Rabin-Resume.pdf"
+  download="Rabin_Resume.pdf"   // ✅ rename on download
+  className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
+>
+  Download CV
+</a>
             </div>
           </div>
 
@@ -64,7 +65,7 @@ export const AboutSection = () => {
                   <h4 className="font-semibold text-lg">Working with Teams</h4>
                   <p className="text-muted-foreground">
                     Cooperating with others to complete projects efficiently
-                     and effectively together.
+                    and effectively together.
                   </p>
                 </div>
               </div>
@@ -79,7 +80,7 @@ export const AboutSection = () => {
                   <h4 className="font-semibold text-lg">Communication Skills</h4>
                   <p className="text-muted-foreground">
                     Clear, concise, and effective communication to ensure
-                     understanding and teamwork
+                    understanding and teamwork
                   </p>
                 </div>
               </div>

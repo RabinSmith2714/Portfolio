@@ -1,4 +1,4 @@
-import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import { ArrowRight, Github } from "lucide-react";
 
 const projects = [
   {
@@ -7,26 +7,23 @@ const projects = [
     description: "Web app for creating, assigning, tracking tasks with real-time updates.",
     image: "/projects/project1.png",
     tags: ["Laravel", "JavaScript", "MySQL", "Bootstrap"],
-    demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/RabinSmith2714/Task_Manager",
   },
   {
     id: 2,
     title: "Complaint Management System",
-    description:"Web system to report and resolve complaints with automated approvals using PHP.",
+    description: "Web system to report and resolve complaints with automated approvals using PHP.",
     image: "/projects/project2.png",
     tags: ["PHP", "MySQL", "jQuery", "Bootstrap"],
-    demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/RabinSmith2714/Complaint_Management_System",
   },
   {
     id: 3,
     title: "Real Time Auction Platform",
-    description:"Live auction platform with real-time bidding and dynamic auction rooms.",
+    description: "Live auction platform with real-time bidding and dynamic auction rooms.",
     image: "/projects/project3.png",
     tags: ["MERN", "Socket.IO", "React", "Node.js", "MongoDB"],
-    demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/RabinSmith2714/real_time_auction",
   },
 ];
 
@@ -45,9 +42,9 @@ export const ProjectsSection = () => {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, key) => (
+          {projects.map((project) => (
             <div
-              key={key}
+              key={project.id}
               className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
             >
               <div className="h-48 overflow-hidden">
@@ -60,8 +57,11 @@ export const ProjectsSection = () => {
 
               <div className="p-6">
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag) => (
-                    <span className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+                  {project.tags.map((tag, index) => (
+                    <span
+                      key={index}
+                      className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground"
+                    >
                       {tag}
                     </span>
                   ))}
@@ -73,16 +73,12 @@ export const ProjectsSection = () => {
                 </p>
                 <div className="flex justify-between items-center">
                   <div className="flex space-x-3">
-                    <a
-                      href={project.demoUrl}
-                      target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <ExternalLink size={20} />
-                    </a>
+
+
                     <a
                       href={project.githubUrl}
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="text-foreground/80 hover:text-primary transition-colors duration-300"
                     >
                       <Github size={20} />
